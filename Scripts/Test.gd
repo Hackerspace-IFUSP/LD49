@@ -74,6 +74,7 @@ func _on_slow_mo_zone_body_entered(body):
 		body.MAXSPEED *= .5
 		body.GRAVITY *= .05
 		body.JUMPFORCE *= .5
+		$theme.pitch_scale = 0.5
 
 
 func _on_slow_mo_zone_body_exited(body):
@@ -81,11 +82,13 @@ func _on_slow_mo_zone_body_exited(body):
 		body.MAXSPEED *= 2
 		body.GRAVITY *= 20
 		body.JUMPFORCE *= 2
+		$theme.pitch_scale = 1
 
 
 func _on_dark_room_zone_body_entered(body):
 	if body.name == "Player":
 		$dark_room_zone/anim_light_modulate.play("event")
+		
 
 func _on_dark_room_zone_body_exited(body):
 	if body.name == "Player":
