@@ -1,14 +1,23 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Platform.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 8 )
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 40 )
+
 [node name="Platform" type="RigidBody2D"]
 mode = 1
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2( 32, 8 )
 shape = SubResource( 1 )
+disabled = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 64.0
@@ -17,3 +26,9 @@ color = Color( 0.964706, 0.0627451, 0.0627451, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 32, 8 )
+shape = SubResource( 2 )

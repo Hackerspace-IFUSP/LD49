@@ -59,14 +59,14 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 
 [node name="test" type="Node2D"]
 
+[node name="Platform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 312, -56 )
+
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 336, -16 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
-
-[node name="Platform" parent="." instance=ExtResource( 3 )]
-position = Vector2( 368, -56 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
