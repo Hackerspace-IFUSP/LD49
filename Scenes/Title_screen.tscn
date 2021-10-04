@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Sprites/tilefloor.png" type="Texture" id=1]
 [ext_resource path="res://Font/FreePixel.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Title_screen.gd" type="Script" id=3]
+[ext_resource path="res://crt.tres" type="Material" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 43
@@ -157,6 +158,25 @@ margin_bottom = 236.0
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 text = "PLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CRT" type="ColorRect" parent="CanvasLayer/Control"]
+material = ExtResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
