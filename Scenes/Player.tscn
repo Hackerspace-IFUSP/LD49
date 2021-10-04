@@ -145,7 +145,7 @@ frame = 2
 [node name="walking" type="AnimatedSprite" parent="sprites"]
 frames = SubResource( 8 )
 animation = "walking"
-frame = 2
+frame = 3
 playing = true
 
 [node name="coyote" type="Timer" parent="."]

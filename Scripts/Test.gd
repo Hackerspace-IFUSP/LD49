@@ -7,11 +7,20 @@ var bringing = false
 var can_play_anim = true 
 
 func _ready():
-	pass # Replace with function body.
+	$HUD/Control/Bar/Timer/Timer.text = str($respawn_timer.time_left)
+	$HUD/Control/Bar/Orbs/Orbs.text = str(0)+"x"
 
 func _physics_process(delta):
 	if bringing == true:
 		returning_to_initial_position()
+	update_spwan()
+	
+func update_spwan():
+	$HUD/Control/Bar/Timer/Timer.text = str(int($respawn_timer.time_left))
+	if $respawn_timer.time_left <= 4:
+		$HUD/Control/Bar/Timer/Timer.set("custom_colors/font_color",Color("e61717"))
+	else:
+		$HUD/Control/Bar/Timer/Timer.set("custom_colors/font_color",Color("15e6a0"))	
 	
 func returning_to_initial_position():
 	var player = get_node("Player")
@@ -55,3 +64,8 @@ func returning_to_initial_position():
 func _on_respawn_timer_timeout():
 	bringing = true 
 	can_change = true
+
+
+
+
+
