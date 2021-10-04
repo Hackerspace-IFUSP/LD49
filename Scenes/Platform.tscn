@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Platform.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/platafomra.png" type="Texture" id=2]
+[ext_resource path="res://SFX/Hit 2.wav" type="AudioStream" id=3]
+[ext_resource path="res://SFX/Explosion 2.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 8 )
@@ -9,7 +11,7 @@ extents = Vector2( 32, 8 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 8 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "desevanescence"
 length = 0.3
 tracks/0/type = "value"
@@ -25,8 +27,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "wiggling"
+[sub_resource type="Animation" id=4]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -40,6 +41,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 2, 0 ), Vector2( -2, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("tremolo_sfx:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [node name="Platform" type="RigidBody2D"]
@@ -75,12 +88,18 @@ shape = SubResource( 2 )
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/desevanescence = SubResource( 4 )
-anims/wiggling = SubResource( 3 )
+anims/desevanescence = SubResource( 3 )
+anims/wiggling = SubResource( 4 )
 
 [node name="returning_timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="tremolo_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="droping_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="returning_timer" to="." method="_on_returning_timer_timeout"]

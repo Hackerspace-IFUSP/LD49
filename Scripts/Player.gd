@@ -19,11 +19,14 @@ func _physics_process(delta):
 		motion.x = (Input.get_action_strength("move_right") - Input.get_action_strength("move_left")) * MAXSPEED
 		motion.y += GRAVITY * delta		# Aplica gravidade
 		
-		if is_on_floor(): $sprites/walking.play("walking")
-		else: $sprites/walking.play("jumping")
+		if is_on_floor(): 
+			$sprites/walking.play("walking")
+		else: 
+			$sprites/walking.play("jumping")
 		
 		if Input.is_action_just_pressed("jump"):
 			if is_on_floor():
+				$jump.play()
 				motion.y = -JUMPFORCE
 				$coyote.start()
 

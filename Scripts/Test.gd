@@ -10,6 +10,7 @@ var timer = 20
 func _ready():
 	$HUD/Control/Bar/Timer/Timer.text = str(int($respawn_timer.time_left))
 	$HUD/Control/Bar/Orbs/Orbs.text = "0x"
+	$theme.play()
 
 func _physics_process(delta):
 	if bringing == true:
@@ -94,3 +95,13 @@ func _on_dark_room_zone_body_exited(body):
 #for hud
 func update_hud(orbs):
 	$HUD/Control/Bar/Orbs/Orbs.text = str(int(orbs))+"x"
+
+
+func _on_activation_self_inset_body_entered(body):
+	if body.name == "Player":
+		$Self_insert/anim.play("event")
+
+
+func _on_activation_self_inset_body_exited(body):
+	if body.name == "Player":
+		$Self_insert/Label.modulate.a = 0

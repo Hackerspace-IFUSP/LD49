@@ -32,6 +32,7 @@ func _on_Timer_timeout():
 	self.mode = RigidBody2D.MODE_RIGID
 	#set_collision_mask_bit(0, false)
 	$AnimationPlayer.stop()
+	$droping_sfx.play()
 	pass
 
 
