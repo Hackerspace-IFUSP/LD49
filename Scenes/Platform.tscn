@@ -9,6 +9,7 @@ extents = Vector2( 32, 8 )
 extents = Vector2( 32, 40 )
 
 [node name="Platform" type="RigidBody2D"]
+position = Vector2( 0.862042, 0 )
 mode = 1
 contacts_reported = 1
 contact_monitor = true
