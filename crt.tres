@@ -45,5 +45,5 @@ void fragment()
 
 [resource]
 shader = SubResource( 1 )
-shader_param/scanline_count = 1.0
+shader_param/scanline_count = 39.298
 shader_param/curve = 5.0

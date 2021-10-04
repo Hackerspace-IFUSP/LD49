@@ -105,3 +105,8 @@ func _on_activation_self_inset_body_entered(body):
 func _on_activation_self_inset_body_exited(body):
 	if body.name == "Player":
 		$Self_insert/Label.modulate.a = 0
+
+
+func _on_Area2D2_body_entered(body):
+	if body.name == "Player":
+		get_tree().change_scene("res://Scenes/thankyou.tscn")
