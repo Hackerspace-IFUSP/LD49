@@ -1,9 +1,11 @@
 # A code by: KeichiTS & Ícaro Freire - 2021 
 extends KinematicBody2D
 
-const GRAVITY = 2000
+var GRAVITY = 2000
 const MAXSPEED = 200
 const JUMPFORCE = 800
+
+var can_move: bool = true
 
 var motion = Vector2()
 

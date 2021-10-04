@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://Temp/monocolor_tile_16x16.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/tilefloor.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Orb.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Table.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scripts/Test.gd" type="Script" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -388,10 +389,11 @@ font_data = ExtResource( 7 )
 [sub_resource type="Theme" id=56]
 default_font = SubResource( 55 )
 
-[node name="test" type="Node2D"]
+[node name="Test" type="Node2D"]
+script = ExtResource( 11 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 336, -16 )
+position = Vector2( 1128, -352 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
@@ -521,4 +523,8 @@ position = Vector2( 0, -15.2781 )
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource( 8 )]
-position = Vector2( 297.403, -15.7155 )
+position = Vector2( 296, -64 )
+
+[node name="respawn_timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
