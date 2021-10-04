@@ -12,7 +12,7 @@ func _ready():
 	$HUD/Control/Bar/Orbs/Orbs.text = "0x"
 	$theme.play()
 	$anim.play("event")
-	yield($anim,"animation_finished")
+#	yield($anim,"animation_finished")
 
 func _physics_process(delta):
 	if bringing == true:

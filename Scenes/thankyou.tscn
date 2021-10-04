@@ -43,6 +43,20 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "black_screen_del"
+} ]
+}
 
 [node name="ThankYou" type="Control"]
 anchor_right = 1.0
@@ -111,6 +125,7 @@ __meta__ = {
 }
 
 [node name="black_screen" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 margin_right = 240.0
 margin_bottom = 264.0
 mouse_filter = 2
