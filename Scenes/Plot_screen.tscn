@@ -1,0 +1,188 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Font/FreePixel.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/demonio.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Plot_screen.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 48, 64 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="DynamicFont" id=1]
+size = 13
+outline_size = 1
+outline_color = Color( 0.317647, 0.105882, 1, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "event"
+length = 18.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("black_screen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 5, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Label3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 9, 12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Label4:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 13.1, 16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Plot_screen" type="Node"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 240.0
+margin_bottom = 264.0
+color = Color( 0.027451, 0.101961, 0.0745098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 208, 192 )
+frames = SubResource( 4 )
+frame = 1
+playing = true
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 16.0
+margin_right = 240.0
+margin_bottom = 115.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.901961, 0.627451, 1 )
+text = "The \"Entity\" has cursed you with the \"Curse of Temporal Instability\" and needs to collect all Orbs of fate to go back to before the curse.
+"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 88.0
+margin_right = 240.0
+margin_bottom = 187.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.901961, 0.627451, 1 )
+text = "For this, you invaded the \"Entity\" castle to collect all these Orbs.
+
+"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 135.0
+margin_right = 240.0
+margin_bottom = 234.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.901961, 0.627451, 1 )
+text = "However, the curse still prevails and you will need to face it.
+
+
+"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 218.0
+margin_right = 240.0
+margin_bottom = 317.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0823529, 0.901961, 0.627451, 1 )
+text = "(Use arrow keys to play)
+
+
+"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/event = SubResource( 5 )
+
+[node name="black_screen" type="ColorRect" parent="."]
+margin_right = 240.0
+margin_bottom = 264.0
+color = Color( 0.027451, 0.101961, 0.0745098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

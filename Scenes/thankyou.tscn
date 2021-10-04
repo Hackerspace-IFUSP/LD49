@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://crt.tres" type="Material" id=1]
 [ext_resource path="res://Scripts/thankyou.gd" type="Script" id=2]
@@ -27,6 +27,22 @@ font_data = SubResource( 1 )
 outline_size = 1
 outline_color = Color( 0.317647, 0.105882, 1, 1 )
 font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "event"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("black_screen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [node name="ThankYou" type="Control"]
 anchor_right = 1.0
@@ -93,5 +109,16 @@ mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="black_screen" type="ColorRect" parent="."]
+margin_right = 240.0
+margin_bottom = 264.0
+color = Color( 0.027451, 0.101961, 0.0745098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/event = SubResource( 9 )
 
 [connection signal="pressed" from="BG/CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]

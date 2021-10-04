@@ -11,6 +11,8 @@ func _ready():
 	$HUD/Control/Bar/Timer/Timer.text = str(int($respawn_timer.time_left))
 	$HUD/Control/Bar/Orbs/Orbs.text = "0x"
 	$theme.play()
+	$anim.play("event")
+	yield($anim,"animation_finished")
 
 func _physics_process(delta):
 	if bringing == true:

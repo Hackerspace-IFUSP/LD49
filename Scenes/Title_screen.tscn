@@ -6,8 +6,8 @@
 [ext_resource path="res://crt.tres" type="Material" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 43
-outline_size = 2
+size = 13
+outline_size = 1
 outline_color = Color( 0.317647, 0.105882, 1, 1 )
 font_data = ExtResource( 2 )
 
