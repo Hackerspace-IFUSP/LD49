@@ -835,572 +835,574 @@ texture = ExtResource( 16 )
 [node name="vela" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -480, -20.312 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela2" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -450, -20 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela3" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -420, -20 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela4" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -390, -20 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela5" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -357.326, -19.9999 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela6" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -327.326, -19.6879 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela7" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -297.326, -19.6879 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela8" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -267.326, -19.6879 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela9" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -239.334, -19.6877 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela10" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -209.334, -19.3757 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela11" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -179.334, -19.3757 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela12" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -149.334, -19.3757 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela13" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -360.077, 393.461 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela14" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -330.077, 393.773 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela15" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -300.077, 393.773 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela16" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -270.077, 393.773 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela17" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 71.4461, 402.911 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela18" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 101.446, 403.223 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela19" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 131.446, 403.223 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela20" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 161.446, 403.223 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela21" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 71.4461, 325.741 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela22" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 101.446, 326.053 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela23" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 131.446, 326.053 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela24" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 161.446, 326.053 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela25" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 73.546, 473.781 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela26" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 103.546, 474.094 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela27" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 133.546, 474.094 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela28" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 163.546, 474.094 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela29" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 455.722, 409.211 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela30" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 485.722, 409.523 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela31" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 515.722, 409.523 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela32" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 545.722, 409.523 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela33" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 454.672, 466.957 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela34" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 484.672, 467.269 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela35" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 514.672, 467.269 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela36" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 544.672, 467.269 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela37" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 456.247, 341.49 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela38" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 486.247, 341.802 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela39" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 516.247, 341.802 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela40" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 546.247, 341.802 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela41" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 780.152, 279.544 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela42" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 810.152, 279.856 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela43" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 840.152, 279.856 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela44" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 870.152, 279.856 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela45" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1105.11, 282.168 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela46" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1135.11, 282.48 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela47" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1165.11, 282.48 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela48" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1195.11, 282.48 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela49" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 943.942, 358.289 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela50" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 973.942, 358.601 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela51" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1003.94, 358.601 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela52" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1033.94, 358.601 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela53" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 854.172, 425.484 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela54" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 884.172, 425.796 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela55" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 914.172, 425.796 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela56" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 944.172, 425.796 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela57" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 900.894, 175.6 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela58" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 930.894, 175.912 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela59" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 960.894, 175.912 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela60" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 990.894, 175.912 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela61" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 681.458, 178.75 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela62" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 711.458, 179.062 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela63" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 741.458, 179.062 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela64" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 771.458, 179.062 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela65" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 794.326, 65.8819 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela66" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 824.326, 66.1939 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela67" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 854.326, 66.1939 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela68" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 884.326, 66.1939 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela69" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 387.286, -157.616 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela70" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 417.286, -157.304 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela71" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 447.286, -157.304 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela72" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 477.286, -157.304 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela73" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 627.015, -162.61 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela74" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 657.015, -162.298 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela75" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 687.015, -162.298 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela76" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 717.015, -162.298 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela77" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 569.58, -38.9996 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela78" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 599.58, -38.6876 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela79" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 629.58, -38.6876 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela80" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 659.58, -38.6876 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela81" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1002.84, -170.102 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela82" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1032.84, -169.79 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela83" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1062.84, -169.79 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela84" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1092.84, -169.79 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela85" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1015.33, -245.017 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela86" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1045.33, -244.705 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela87" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1075.33, -244.705 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela88" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 1105.33, -244.705 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela89" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 774.348, -462.271 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela90" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 804.348, -461.959 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela91" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 834.348, -461.959 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela92" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 864.348, -461.959 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela93" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 221.223, -294.961 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela94" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 251.223, -294.648 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela95" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 281.223, -294.648 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela96" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( 311.223, -294.648 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela97" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -319.416, -469.763 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela98" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -289.416, -469.451 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela99" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -259.416, -469.451 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela100" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -229.416, -469.451 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela101" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -261.981, -304.949 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela102" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -231.981, -304.637 )
 frames = SubResource( 66 )
-frame = 1
 playing = true
 
 [node name="vela103" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -201.981, -304.637 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="vela104" type="AnimatedSprite" parent="enfeite"]
 position = Vector2( -171.981, -304.637 )
 frames = SubResource( 66 )
+frame = 1
 playing = true
 
 [node name="black_screen" type="ColorRect" parent="."]
