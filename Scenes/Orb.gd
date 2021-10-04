@@ -8,5 +8,6 @@ func _on_Area2D_body_entered(body):
 			colected = true
 			body.orbs += 1
 			get_tree().call_group("hud", "update_hud", body.orbs)
+			get_parent().get_parent().get_parent().timer -= 2
 		$AnimationPlayer.play("collect")
-		get_parent().get_parent().get_parent().timer -= 2
+		

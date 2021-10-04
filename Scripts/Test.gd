@@ -88,12 +88,12 @@ func _on_slow_mo_zone_body_exited(body):
 func _on_dark_room_zone_body_entered(body):
 	if body.name == "Player":
 		$dark_room_zone/anim_light_modulate.play("event")
-		
+		$theme.bus = "Dark"
 
 func _on_dark_room_zone_body_exited(body):
 	if body.name == "Player":
 		$dark_room_zone/anim_light_modulate.play("event2")
-
+		$theme.bus = "Master"
 
 #for hud
 func update_hud(orbs):
