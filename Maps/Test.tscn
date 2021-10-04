@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://Temp/monocolor_tile_16x16.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/tilefloor.png" type="Texture" id=2]
@@ -389,11 +389,50 @@ font_data = ExtResource( 7 )
 [sub_resource type="Theme" id=56]
 default_font = SubResource( 55 )
 
+[sub_resource type="RectangleShape2D" id=58]
+extents = Vector2( 184.075, 246.547 )
+
+[sub_resource type="RectangleShape2D" id=59]
+extents = Vector2( 470.874, 246.547 )
+
+[sub_resource type="Animation" id=60]
+resource_name = "event"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../light_modulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.027451, 0.101961, 0.0745098, 1 ) ]
+}
+
+[sub_resource type="Animation" id=61]
+resource_name = "event2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../light_modulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.027451, 0.101961, 0.0745098, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="Test" type="Node2D"]
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 359.75, -286.332 )
+position = Vector2( -352, -64 )
 collision_mask = 0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -519,9 +558,33 @@ __meta__ = {
 [node name="Orbs" type="Node" parent="."]
 
 [node name="Table" parent="Orbs" instance=ExtResource( 10 )]
-position = Vector2( 525.581, -8.12005 )
+position = Vector2( -104, -456 )
 
 [node name="Orb" parent="Orbs/Table" instance=ExtResource( 9 )]
+position = Vector2( 0, -15.2781 )
+
+[node name="Table2" parent="Orbs" instance=ExtResource( 10 )]
+position = Vector2( 1232, -456 )
+
+[node name="Orb" parent="Orbs/Table2" instance=ExtResource( 9 )]
+position = Vector2( 0, -15.2781 )
+
+[node name="Table3" parent="Orbs" instance=ExtResource( 10 )]
+position = Vector2( 1224, -152 )
+
+[node name="Orb" parent="Orbs/Table3" instance=ExtResource( 9 )]
+position = Vector2( 0, -15.2781 )
+
+[node name="Table4" parent="Orbs" instance=ExtResource( 10 )]
+position = Vector2( 1224, 456 )
+
+[node name="Orb" parent="Orbs/Table4" instance=ExtResource( 9 )]
+position = Vector2( 0, -15.2781 )
+
+[node name="Table5" parent="Orbs" instance=ExtResource( 10 )]
+position = Vector2( -56, 488 )
+
+[node name="Orb" parent="Orbs/Table5" instance=ExtResource( 9 )]
 position = Vector2( 0, -15.2781 )
 
 [node name="Doors" type="Node" parent="."]
@@ -566,4 +629,27 @@ position = Vector2( 937.191, -394.271 )
 [node name="Platform10" parent="platforms" instance=ExtResource( 3 )]
 position = Vector2( 1072.02, -397.503 )
 
+[node name="slow_mo_zone" type="Area2D" parent="."]
+
+[node name="shape" type="CollisionShape2D" parent="slow_mo_zone"]
+position = Vector2( 105.126, 258.361 )
+shape = SubResource( 58 )
+
+[node name="dark_room_zone" type="Area2D" parent="."]
+position = Vector2( 688, 0 )
+
+[node name="shape" type="CollisionShape2D" parent="dark_room_zone"]
+position = Vector2( 90.1262, 258.361 )
+shape = SubResource( 59 )
+
+[node name="anim_light_modulate" type="AnimationPlayer" parent="dark_room_zone"]
+anims/event = SubResource( 60 )
+anims/event2 = SubResource( 61 )
+
+[node name="light_modulate" type="CanvasModulate" parent="."]
+
 [connection signal="timeout" from="respawn_timer" to="." method="_on_respawn_timer_timeout"]
+[connection signal="body_entered" from="slow_mo_zone" to="." method="_on_slow_mo_zone_body_entered"]
+[connection signal="body_exited" from="slow_mo_zone" to="." method="_on_slow_mo_zone_body_exited"]
+[connection signal="body_entered" from="dark_room_zone" to="." method="_on_dark_room_zone_body_entered"]
+[connection signal="body_exited" from="dark_room_zone" to="." method="_on_dark_room_zone_body_exited"]

@@ -2,8 +2,8 @@
 extends KinematicBody2D
 
 var GRAVITY = 2000
-const MAXSPEED = 250
-const JUMPFORCE = 525
+var MAXSPEED = 250
+var JUMPFORCE = 525
 
 var can_move: bool = true
 

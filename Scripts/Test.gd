@@ -55,3 +55,30 @@ func returning_to_initial_position():
 func _on_respawn_timer_timeout():
 	bringing = true 
 	can_change = true
+
+
+
+
+func _on_slow_mo_zone_body_entered(body):
+	if body.name == "Player":
+		body.MAXSPEED *= .5
+		body.GRAVITY *= .05
+		body.JUMPFORCE *= .5
+
+
+func _on_slow_mo_zone_body_exited(body):
+	if body.name == "Player":
+		body.MAXSPEED *= 2
+		body.GRAVITY *= 20
+		body.JUMPFORCE *= 2
+
+
+func _on_dark_room_zone_body_entered(body):
+	if body.name == "Player":
+		$dark_room_zone/anim_light_modulate.play("event")
+#		yield($dark_room_zone/anim_light_modulate,"animation_finished")
+
+
+func _on_dark_room_zone_body_exited(body):
+	if body.name == "Player":
+		$dark_room_zone/anim_light_modulate.play("event2")

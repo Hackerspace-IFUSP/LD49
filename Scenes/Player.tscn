@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Sprites/Walking_32x32_skeleton-Sheet.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Jumping_32x32_skeleton-Sheet.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/demohand.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Light.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.44356, 14.0092 )
@@ -155,5 +156,9 @@ one_shot = true
 [node name="anim" type="AnimationPlayer" parent="."]
 anims/event = SubResource( 9 )
 anims/event2 = SubResource( 10 )
+
+[node name="light" type="Light2D" parent="."]
+texture = ExtResource( 5 )
+mode = 2
 
 [connection signal="timeout" from="coyote" to="." method="_on_coyote_timeout"]
