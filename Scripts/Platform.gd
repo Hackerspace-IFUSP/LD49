@@ -10,16 +10,22 @@ func _ready():
 
 func _physics_process(delta):
 	
+	$Collider.disabled = true
 	var bodies = $Area2D.get_overlapping_bodies()
 	if bodies:
 		if bodies[0].name == 'Player':
-			$Collider.disabled = bodies[0].global_position.y > self.global_position.y - 16
-			if self.unstable:
-				self.collapse()
-		else:
-			$Collider.disabled = true
+			$Collider.disabled = false
+			if self.unstable and $Timer.is_stopped(): self.collapse()
 	
 	pass
 
 func collapse():
+	$Timer.start()
+	$Collider.disabled = false
+	$AnimationPlayer.play("wiggling")
+	pass
+
+
+func _on_Timer_timeout():
+	self.mode = RigidBody2D.MODE_RIGID
 	pass

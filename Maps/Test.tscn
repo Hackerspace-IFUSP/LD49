@@ -59,33 +59,28 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 
 [node name="test" type="Node2D"]
 
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Platform" parent="Platforms" instance=ExtResource( 3 )]
+position = Vector2( 368, -64 )
+
+[node name="Platform2" parent="Platforms" instance=ExtResource( 3 )]
+position = Vector2( 464, -96 )
+
+[node name="Platform3" parent="Platforms" instance=ExtResource( 3 )]
+position = Vector2( 528, -112 )
+
+[node name="Platform4" parent="Platforms" instance=ExtResource( 3 )]
+position = Vector2( 624, -128 )
+
+[node name="Platform5" parent="Platforms" instance=ExtResource( 3 )]
+position = Vector2( 720, -128 )
+
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 336, -16 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
-
-[node name="Platforms" type="Node2D" parent="."]
-
-[node name="Platform" parent="Platforms" instance=ExtResource( 3 )]
-position = Vector2( 368, -64 )
-unstable = true
-
-[node name="Platform2" parent="Platforms" instance=ExtResource( 3 )]
-position = Vector2( 464, -96 )
-unstable = true
-
-[node name="Platform3" parent="Platforms" instance=ExtResource( 3 )]
-position = Vector2( 528, -112 )
-unstable = true
-
-[node name="Platform4" parent="Platforms" instance=ExtResource( 3 )]
-position = Vector2( 624, -128 )
-unstable = true
-
-[node name="Platform5" parent="Platforms" instance=ExtResource( 3 )]
-position = Vector2( 720, -128 )
-unstable = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
