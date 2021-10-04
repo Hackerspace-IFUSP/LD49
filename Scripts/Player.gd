@@ -5,6 +5,8 @@ var GRAVITY = 2000
 var MAXSPEED = 250
 var JUMPFORCE = 525
 
+var orbs : int = 0
+
 var can_move: bool = true
 
 var motion = Vector2()

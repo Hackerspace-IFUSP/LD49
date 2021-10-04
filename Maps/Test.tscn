@@ -398,7 +398,9 @@ tracks/0/keys = {
 "values": [ Color( 0.027451, 0.101961, 0.0745098, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Test" type="Node2D"]
+[node name="Test" type="Node2D" groups=[
+"hud",
+]]
 script = ExtResource( 11 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
@@ -527,6 +529,12 @@ __meta__ = {
 position = Vector2( -104, -456 )
 
 [node name="Orb" parent="Orbs/Table" instance=ExtResource( 9 )]
+position = Vector2( 0, -15.2781 )
+
+[node name="Table6" parent="Orbs" instance=ExtResource( 10 )]
+position = Vector2( -296.26, -8.10124 )
+
+[node name="Orb" parent="Orbs/Table6" instance=ExtResource( 9 )]
 position = Vector2( 0, -15.2781 )
 
 [node name="Table2" parent="Orbs" instance=ExtResource( 10 )]
