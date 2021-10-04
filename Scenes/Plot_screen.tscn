@@ -1,26 +1,27 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Font/FreePixel.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sprites/demonio.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Plot_screen.gd" type="Script" id=3]
+[ext_resource path="res://crt.tres" type="Material" id=4]
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 48, 64 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 2 )
 region = Rect2( 48, 0, 48, 64 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
 "loop": true,
 "name": "default",
 "speed": 2.0
 } ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=4]
 size = 13
 outline_size = 1
 outline_color = Color( 0.317647, 0.105882, 1, 1 )
@@ -103,7 +104,7 @@ __meta__ = {
 
 [node name="sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 208, 192 )
-frames = SubResource( 4 )
+frames = SubResource( 3 )
 frame = 1
 playing = true
 
@@ -112,9 +113,9 @@ modulate = Color( 1, 1, 1, 0 )
 margin_top = 16.0
 margin_right = 240.0
 margin_bottom = 115.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.0823529, 0.901961, 0.627451, 1 )
-text = "The \"Entity\" has cursed you with the \"Curse of Temporal Instability\" and needs to collect all Orbs of fate to go back to before the curse.
+text = "The \"Entity\" has cursed you with the \"Curse of Temporal Instability\". You need to collect all Orbs of fate to go back to the time before the curse.
 "
 align = 1
 valign = 1
@@ -128,9 +129,9 @@ modulate = Color( 1, 1, 1, 0 )
 margin_top = 88.0
 margin_right = 240.0
 margin_bottom = 187.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.0823529, 0.901961, 0.627451, 1 )
-text = "For this, you invaded the \"Entity\" castle to collect all these Orbs.
+text = "For this, you have invaded the \"Entity\" castle to collect all Orbs.
 
 "
 align = 1
@@ -145,7 +146,7 @@ modulate = Color( 1, 1, 1, 0 )
 margin_top = 135.0
 margin_right = 240.0
 margin_bottom = 234.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.0823529, 0.901961, 0.627451, 1 )
 text = "However, the curse still prevails and you will need to face it.
 
@@ -163,7 +164,7 @@ modulate = Color( 1, 1, 1, 0 )
 margin_top = 218.0
 margin_right = 240.0
 margin_bottom = 317.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.0823529, 0.901961, 0.627451, 1 )
 text = "(Use arrow keys to play)
 
@@ -183,6 +184,16 @@ anims/event = SubResource( 5 )
 margin_right = 240.0
 margin_bottom = 264.0
 color = Color( 0.027451, 0.101961, 0.0745098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CRT" type="ColorRect" parent="CanvasLayer"]
+material = ExtResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

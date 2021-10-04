@@ -9,6 +9,8 @@ var orbs : int = 0
 
 var can_move: bool = true
 
+var can_jump: bool = true
+
 var motion = Vector2()
 
 func _ready():
@@ -21,14 +23,15 @@ func _physics_process(delta):
 		
 		if is_on_floor(): 
 			$sprites/walking.play("walking")
+			can_jump = true
 		else: 
 			$sprites/walking.play("jumping")
 		
-		if Input.is_action_just_pressed("jump"):
-			if is_on_floor():
-				$jump.play()
-				motion.y = -JUMPFORCE
-				$coyote.start()
+		if Input.is_action_just_pressed("jump") and can_jump:
+			
+			$jump.play()
+			motion.y = -JUMPFORCE
+			$coyote.start()
 
 
 		motion = move_and_slide(motion, Vector2.UP)			# Função que faz o bixo se mover. 
@@ -70,3 +73,7 @@ func play_anim_2():
 ###################################################
 #               ~ KeichiTS - 2021 ~               #
 ###################################################
+
+
+func _on_coyote_timeout():
+	can_jump = false
