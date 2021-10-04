@@ -5,6 +5,7 @@ var can_change = true
 var distance
 var bringing = false
 var can_play_anim = true 
+var timer = 20
 
 func _ready():
 	$HUD/Control/Bar/Timer/Timer.text = str(int($respawn_timer.time_left))
@@ -64,8 +65,7 @@ func returning_to_initial_position():
 func _on_respawn_timer_timeout():
 	bringing = true 
 	can_change = true
-
-
+	$respawn_timer.wait_time = timer 
 
 
 func _on_slow_mo_zone_body_entered(body):
