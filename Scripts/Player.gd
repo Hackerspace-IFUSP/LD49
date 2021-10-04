@@ -4,6 +4,7 @@ extends KinematicBody2D
 var GRAVITY = 2000
 const MAXSPEED = 250
 const JUMPFORCE = 525
+var orbs = 0
 
 var can_move: bool = true
 

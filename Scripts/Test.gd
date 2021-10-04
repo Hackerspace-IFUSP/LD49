@@ -66,6 +66,9 @@ func _on_respawn_timer_timeout():
 	can_change = true
 
 
+func update_hud(orbs : int):
+	$HUD/Control/Bar/Orbs/Orbs.text = str(orbs)+"x"
+
 
 
 
