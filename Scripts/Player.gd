@@ -10,6 +10,7 @@ var orbs : int = 0
 var can_move: bool = true
 
 var can_jump: bool = true
+var coyote = true
 
 var motion = Vector2()
 
@@ -21,14 +22,19 @@ func _physics_process(delta):
 		motion.x = (Input.get_action_strength("move_right") - Input.get_action_strength("move_left")) * MAXSPEED
 		motion.y += GRAVITY * delta		# Aplica gravidade
 		
+		if motion.y > MAXSPEED: #não pula no ar 
+			can_jump = false
+		
 		if is_on_floor(): 
 			$sprites/walking.play("walking")
 			can_jump = true
+			coyote = true
 		else: 
 			$sprites/walking.play("jumping")
-		
-		if Input.is_action_just_pressed("jump") and can_jump:
 			
+		
+		if Input.is_action_just_pressed("jump") and can_jump and coyote:
+			can_jump = false
 			$jump.play()
 			motion.y = -JUMPFORCE
 			$coyote.start()
